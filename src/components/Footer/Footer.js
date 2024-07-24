@@ -152,6 +152,10 @@ const TopRow = styled.div`
    justify-content: center;
    gap: 48px;
   }
+
+  @media (${QUERIES.tabletAndUp}) { 
+    justify-content: flex-end;
+  }
 `;
 
 const Social = styled.div`
@@ -185,6 +189,10 @@ const MainNavArea = styled.div`
     text-align: left;
     gap: 85px;
   }
+
+  @media (${QUERIES.tabletAndUp}) { 
+    gap: 130px;
+  }
 `;
 
 const MainNavHeading = styled.h2`
@@ -211,6 +219,10 @@ const Subfooter = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (${QUERIES.laptopAndUp}) { 
+    align-items: flex-start;
+  }
 `;
 
 const Logo = styled.a`
