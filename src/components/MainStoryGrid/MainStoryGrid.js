@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import {QUERIES} from '../../constants';
+
 import {
   MAIN_STORY,
   OPINION_STORIES,
@@ -66,6 +68,11 @@ const SecondaryStorySection = styled.section`
 const StoryList = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (${QUERIES.tabletOnly}) { 
+    flex-direction: row;
+    align-items: baseline;
+  }
 `;
 
 const OpinionSection = styled.section`
