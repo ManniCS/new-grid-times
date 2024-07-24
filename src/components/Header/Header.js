@@ -86,29 +86,33 @@ const DesktopNavigationActions = styled.div`
 
   @media (${QUERIES.laptopAndUp}) { 
     display: revert;
+    align-items: center;
     color: var(--color-gray-900);
   }
 `
 
 const SubscribeButton = styled(Button)`
-  margin-top: 22px;
-  margin-bottom: 2px;
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `
 const LoginPrompt = styled.a`
+  position: absolute;
   font-style: italic;  
   font-family: var(--font-family-serif);
   text-decoration: underline;
   font-weight: 400;
   color: var(--color-gray-900);
+  width: 100%;
+  text-align: center;
 `
 
 const DesktopSubscribeActions = styled.div`
   display: none;
 
   @media (${QUERIES.laptopAndUp}) { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: revert;
+    position: relative;
   }
 `
 
@@ -119,14 +123,15 @@ const MainHeader = styled(MaxWidthWrapper)`
   margin-top: 32px;
   margin-bottom: 48px;
 
+  @media (${QUERIES.tabletAndUp}) {
+    margin-top: 48px;
+    margin-bottom: 72px;
+  }
+
   @media (${QUERIES.laptopAndUp}) { 
+    margin-top: 16px;
+    margin-bottom: 72px;
     justify-content: space-between;
-    margin-top: 22px;
-    margin-bottom: clamp(
-      3rem,
-      2.1vw + 1.5rem,
-      4rem
-    );
   }
 `;
 
