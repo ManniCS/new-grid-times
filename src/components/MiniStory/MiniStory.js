@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import {QUERIES} from '../../constants';
+
 const MiniStory = ({ id, image, title }) => {
   return (
     <a href={`/story/${id}`}>
@@ -23,6 +25,9 @@ const Image = styled.img`
   aspect-ratio: 220 / 132;
   object-fit: cover;
   border-radius: 4px;
+  @media (${QUERIES.tabletAndUp}) { 
+    width: 220px;
+  }
 `;
 
 const Title = styled.h3`

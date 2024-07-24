@@ -15,7 +15,7 @@ const App = () => {
         <MainStoryGrid />
         <SpecialtyStoryGrid />
       </MaxWidthWrapper>
-      <Spacer size={64} />
+      <Spacer />
       <Footer />
     </>
   );

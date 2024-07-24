@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+import {QUERIES} from '../../constants';
+
 import { MARKET_DATA, SPORTS_STORIES } from '../../data';
 
 import MarketCard from '../MarketCard';
@@ -26,14 +28,16 @@ const SpecialtyStoryGrid = () => {
         </MarketCards>
       </MarketsSection>
       <SportsSection>
-        <SectionTitle
-          cornerLink={{
-            href: '/sports',
-            content: 'Visit Sports page »',
-          }}
-        >
-          Sports
-        </SectionTitle>
+        <StickyWrapper>
+          <SectionTitle
+            cornerLink={{
+              href: '/sports',
+              content: 'Visit Sports page »',
+            }}
+          >
+            Sports
+          </SectionTitle>
+        </StickyWrapper>
         <SportsStories>
           {SPORTS_STORIES.map((data) => (
             <MiniStory key={data.id} {...data} />
@@ -58,12 +62,25 @@ const MarketCards = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
 `;
 
-const SportsSection = styled.section``;
+const StickyWrapper = styled.div`
+  position: sticky;
+  left: 0;
+`;
+
+const SportsSection = styled.section`
+  width: 100%;
+  overflow: auto;
+  position: relative;
+`;
 
 const SportsStories = styled.div`
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+  
+  @media (${QUERIES.tabletAndUp}) { 
+    display: flex;
+  }
 `;
 
 export default SpecialtyStoryGrid;

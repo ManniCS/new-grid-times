@@ -1,18 +1,18 @@
 import styled from 'styled-components/macro';
 
-function getHeight({ axis, size }) {
-  return axis === 'horizontal' ? 1 : size;
-}
-function getWidth({ axis, size }) {
-  return axis === 'vertical' ? 1 : size;
-}
+import {QUERIES} from '../../constants';
 
 const Spacer = styled.span`
+  --size: 48px;
   display: block;
-  width: ${getWidth}px;
-  min-width: ${getWidth}px;
-  height: ${getHeight}px;
-  min-height: ${getHeight}px;
+  width: var(--size);
+  min-width: var(--size);
+  height: var(--size);
+  min-height: var(--size);
+
+  @media (${QUERIES.laptopAndUp}) { 
+    --size: 64px;
+  }
 `;
 
 export default Spacer;
