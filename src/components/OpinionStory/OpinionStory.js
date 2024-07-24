@@ -58,7 +58,12 @@ const Avatar = styled.img`
 `;
 
 const SideWrapper = styled.div`
+  /* Make enough space for avatar */
   width: calc(100% - (48px + 40px)); 
+
+  @media (${QUERIES.tabletOnly}) { 
+    width: 100%;
+  }
 `
 
 const AuthorName = styled.p`
