@@ -58,7 +58,7 @@ const Avatar = styled.img`
 `;
 
 const SideWrapper = styled.div`
-  width: calc(100% - (48px + 10px)); 
+  width: calc(100% - (48px + 40px)); 
 `
 
 const AuthorName = styled.p`

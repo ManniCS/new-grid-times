@@ -18,13 +18,14 @@ const MainStory = ({
       <Abstract>
         <Location>{location}</Location> — {abstract}
       </Abstract>
-      <ReadMore href="/story">Continue Reading…</ReadMore>
+      <ReadMore href="/story">Continue Reading</ReadMore>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
+
 `;
 
 const Image = styled.img`
@@ -44,6 +45,12 @@ const Abstract = styled.p`
   font-size: 1rem;
   margin-bottom: 1em;
   white-space: pre-wrap;
+
+  /* Truncate abstract after 8 lines */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
 `;
 
 const Location = styled.span`
