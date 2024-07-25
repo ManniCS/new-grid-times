@@ -124,14 +124,14 @@ const MainHeader = styled(MaxWidthWrapper)`
   margin-bottom: 48px;
 
   @media (${QUERIES.tabletAndUp}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
     margin-top: 48px;
     margin-bottom: 72px;
   }
 
   @media (${QUERIES.laptopAndUp}) { 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
     margin-top: 16px;
     margin-bottom: 72px;
   }
