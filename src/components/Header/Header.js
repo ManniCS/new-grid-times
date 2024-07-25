@@ -86,7 +86,6 @@ const DesktopNavigationActions = styled.div`
 
   @media (${QUERIES.laptopAndUp}) { 
     display: revert;
-    align-items: center;
     color: var(--color-gray-900);
   }
 `
@@ -113,6 +112,7 @@ const DesktopSubscribeActions = styled.div`
   @media (${QUERIES.laptopAndUp}) { 
     display: revert;
     position: relative;
+    justify-self: end;
   }
 `
 
@@ -124,6 +124,9 @@ const MainHeader = styled(MaxWidthWrapper)`
   margin-bottom: 48px;
 
   @media (${QUERIES.tabletAndUp}) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
     margin-top: 48px;
     margin-bottom: 72px;
   }
@@ -131,7 +134,6 @@ const MainHeader = styled(MaxWidthWrapper)`
   @media (${QUERIES.laptopAndUp}) { 
     margin-top: 16px;
     margin-bottom: 72px;
-    justify-content: space-between;
   }
 `;
 
