@@ -39,7 +39,7 @@ const Wrapper = styled.article`
   grid-template-columns: 120px 1fr;
   color: var(--color-gray-900);
 
-  @media (${QUERIES.tabletAndUp}) { 
+  @media (${QUERIES.tabletOnly}) { 
     display: flex;
     flex-direction: column;
   }

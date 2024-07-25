@@ -59,10 +59,13 @@ const Avatar = styled.img`
 
 const SideWrapper = styled.div`
   /* Make enough space for avatar */
-  width: calc(100% - (48px + 40px)); 
+  width: calc(100% - (48px + 10px)); 
 
-  @media (${QUERIES.tabletOnly}) { 
+  @media (${QUERIES.tabletAndUp}) { 
     width: 100%;
+  }
+  @media (${QUERIES.laptopAndUp}) { 
+    width: calc(100% - (48px + 10px)); 
   }
 `
 

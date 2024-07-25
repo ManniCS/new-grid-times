@@ -57,6 +57,9 @@ const Abstract = styled.p`
   @media (${QUERIES.tabletAndUp}) { 
     -webkit-line-clamp: 15;  
   }
+  @media (${QUERIES.laptopAndUp}) { 
+    -webkit-line-clamp: 8;  
+  }
 `;
 
 const Location = styled.span`
