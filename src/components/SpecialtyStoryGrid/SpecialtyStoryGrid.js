@@ -28,16 +28,14 @@ const SpecialtyStoryGrid = () => {
         </MarketCards>
       </MarketsSection>
       <SportsSection>
-        <StickyWrapper>
-          <SectionTitle
-            cornerLink={{
-              href: '/sports',
-              content: 'Visit Sports page »',
-            }}
-          >
-            Sports
-          </SectionTitle>
-        </StickyWrapper>
+        <SectionTitle
+          cornerLink={{
+            href: '/sports',
+            content: 'Visit Sports page »',
+          }}
+        >
+          Sports
+        </SectionTitle>
         <SportsStories>
           {SPORTS_STORIES.map((data) => (
             <MiniStory key={data.id} {...data} />
@@ -52,8 +50,12 @@ const Wrapper = styled.div`
   display: grid;
   gap: 48px;
 
+  @media (${QUERIES.tabletAndUp}) { 
+    grid-template-columns: minmax(0, auto);
+  }
+
   @media (${QUERIES.laptopAndUp}) { 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr minmax(0, 1fr);
     gap: 0;
   }
 `;
@@ -71,14 +73,8 @@ const MarketCards = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
 `;
 
-const StickyWrapper = styled.div`
-  position: sticky;
-  left: 0;
-`;
-
 const SportsSection = styled.section`
   width: 100%;
-  overflow: auto;
   position: relative;
 
   /* Center the divider between the markets and sports section on desktop while splitting 
@@ -95,6 +91,7 @@ const SportsStories = styled.div`
   
   @media (${QUERIES.tabletAndUp}) { 
     display: flex;
+    overflow: auto;
   }
 `;
 
